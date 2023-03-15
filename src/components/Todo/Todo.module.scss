@@ -6,17 +6,17 @@
   justify-content: space-between;
 
   background-color: #1E1E1E;
-  border-inline: 1px solid #EF6121;
-  border-top: 1px solid #EF6121;
+  border-inline: 1px solid #EDC844;
+  border-top: 1px solid #EDC844;
 
   &:first-child {
     border-radius: 12px 12px 0 0;
-    border-top: 1px solid #EF6121;
+    border-top: 1px solid #EDC844;
   }
 
   &:last-child {
     border-radius: 0 0 12px 12px ;
-    border-bottom: 1px solid #EF6121;
+    border-bottom: 1px solid #EDC844;
   }
 
   &:only-child {
@@ -39,7 +39,7 @@
   border: none;
   cursor: pointer;
   width: 32px;
-  color: currentColor;
+  color: #DA2A33;
   transition: opacity 200ms ease-in-out;
 
 
@@ -49,5 +49,15 @@
 
   &>svg {
     width: 100%;
+  }
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+
+  &>p {
+    font-size: 1.25rem;
   }
 }
