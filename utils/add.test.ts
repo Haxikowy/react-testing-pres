@@ -7,9 +7,11 @@ describe('add', () => {
     // ARRANGE
     const a = 1;
     const b = 2;
+
     // ACT
-    const result = add(a, b)
+    const result = add(a, b);
+
     // ASSERT
-    expect(result).toEqual(3)
+    expect(result).toEqual(3);
   });
 });
