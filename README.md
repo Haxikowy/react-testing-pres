@@ -1,20 +1,31 @@
 # Testing in react featuring: Vite, Vitest, React Testing Library
 
-This project is a simple todo-app made to practice testing.
+This project is a simple `todo-app` made to practice testing. Project utilizes `vite`, `vitest` and `react-testing-library`.
 
-## Prerequisites:
+## Table of contents
+- [Project startup](#project-startup)
+    - [Prerequisites](#prerequisites)
+    - [Scripts to run](#scripts-to-run)
+    - [Other scripts](#other-scripts)
+- [Future goals](#future-goals)
+
+## Project startup
+
+### Prerequisites
+We assume that you have installed:
 
 - `node` v14+
 - `npm` or `yarn`
 
-## Project startup
+### Scripts to run
+If you want to start application simply run those commands in your terminal.
 
-1. Install dependencies
+- install dependencies
 ```zsh
 npm install
 ```
 
-2. Run dev server
+- run dev server
 ```zsh
 npm run dev
 ```
