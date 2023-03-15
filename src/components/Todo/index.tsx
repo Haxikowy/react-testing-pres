@@ -20,20 +20,26 @@ export function Todo({
 }: Props) {
   return (
     <li
+      data-testid={`todo-item--${id}`}
       className={clsx(styles.todoItem, { [styles.completed]: !!completedAt })}
     >
       <div className={styles.row}>
         <input
           type="checkbox"
+          data-testid={`todo-item__checkbox--${id}`}
           checked={!!completedAt}
           onChange={() => onTodoStatusChange(id)}
         />
-        <div>
+        <div className={styles.details}>
           <p>{title}</p>
-          <span>{format(new Date(createdAt), 'yyyy-MM-dd HH:mm:ss')}</span>
+          <span>{format(new Date(createdAt), 'yyyy-MM-dd, HH:mm:ss')}</span>
         </div>
       </div>
-      <button className={styles.deleteButton} onClick={() => onTodoDelete(id)}>
+      <button
+        data-testid={`todo-item__delete-btn--${id}`}
+        className={styles.deleteButton}
+        onClick={() => onTodoDelete(id)}
+      >
         <TrashIcon />
       </button>
     </li>
