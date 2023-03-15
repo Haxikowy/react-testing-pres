@@ -1,0 +1,53 @@
+.todoItem {
+  width: 100%;
+  padding: 1rem;
+
+  display: flex;
+  justify-content: space-between;
+
+  background-color: #1E1E1E;
+  border-inline: 1px solid #EF6121;
+  border-top: 1px solid #EF6121;
+
+  &:first-child {
+    border-radius: 12px 12px 0 0;
+    border-top: 1px solid #EF6121;
+  }
+
+  &:last-child {
+    border-radius: 0 0 12px 12px ;
+    border-bottom: 1px solid #EF6121;
+  }
+
+  &:only-child {
+    border-radius: 12px;
+  }
+
+  &.completed {
+    text-decoration: line-through;
+  }
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.deleteButton {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  width: 32px;
+  color: currentColor;
+  transition: opacity 200ms ease-in-out;
+
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &>svg {
+    width: 100%;
+  }
+}
