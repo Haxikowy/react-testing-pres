@@ -9,5 +9,10 @@ export default defineConfig({
     globals: true,
     environment: 'jsdom',
     setupFiles: './tests/setup.ts',
+    coverage: {
+      provider: 'c8',
+      all: true,
+      include: ['src/**/*.{ts,tsx}', 'utils/**/*.{ts,tsx}'],
+    },
   },
 });
