@@ -1,0 +1,26 @@
+*, *::before, *::after {
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: 'Roboto', sans-serif;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+body {
+  background-color: #161616;
+  color: #e1e1e1;
+}
+
+input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+input[type="checkbox"] {
+  cursor: pointer;
+}

@@ -1,0 +1,63 @@
+.todoItem {
+  width: 100%;
+  padding: 1rem;
+
+  display: flex;
+  justify-content: space-between;
+
+  background-color: #1E1E1E;
+  border-inline: 1px solid #EDC844;
+  border-top: 1px solid #EDC844;
+
+  &:first-child {
+    border-radius: 12px 12px 0 0;
+    border-top: 1px solid #EDC844;
+  }
+
+  &:last-child {
+    border-radius: 0 0 12px 12px ;
+    border-bottom: 1px solid #EDC844;
+  }
+
+  &:only-child {
+    border-radius: 12px;
+  }
+
+  &.completed {
+    text-decoration: line-through;
+  }
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.deleteButton {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  width: 32px;
+  color: #DA2A33;
+  transition: opacity 200ms ease-in-out;
+
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &>svg {
+    width: 100%;
+  }
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+
+  &>p {
+    font-size: 1.25rem;
+  }
+}
