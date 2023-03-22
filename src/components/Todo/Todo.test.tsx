@@ -1,5 +1,6 @@
 import { act, render, screen, fireEvent } from '@testing-library/react';
 import { Todo } from './index';
+import styles from './Todo.module.scss'
 
 describe('Todo', () => {
   const onTodoStatusChange = jest.fn();
@@ -82,5 +83,28 @@ describe('Todo', () => {
 
     // ASSERT
     expect(onTodoDelete).toBeCalledWith(id);
+  });
+
+  test('should have text-decoration: strikethrough style if completed_at is not nullish', async () => {
+    // ARRANGE
+    const title = 'Test title';
+    const id = 'b0b9ef2c-790a-49d4-a2a5-777c61c5c009';
+
+    render(
+      <Todo
+        onTodoStatusChange={onTodoStatusChange}
+        onTodoDelete={onTodoDelete}
+        id={id}
+        title={title}
+        completedAt={new Date()}
+        createdAt={new Date()}
+      />
+    );
+
+    // ACT
+    const todoItem = await screen.findByTestId(`todo-item--${id}`);
+
+    // ASSERT
+    expect(todoItem).toHaveClass(styles.completed);
   });
 });
